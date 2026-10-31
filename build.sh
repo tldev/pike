@@ -2,7 +2,7 @@
 set -euo pipefail
 
 VERSION="${VERSION:-1.3.0}"
-BUILD_NUMBER="${BUILD_NUMBER:-11}"
+BUILD_NUMBER="${BUILD_NUMBER:-12}"
 
 # The data pack bundled into the app. To ship new data, point these at a
 # pack-* release. If the schema changed, also bump SCHEMA_VERSION in pike-export
