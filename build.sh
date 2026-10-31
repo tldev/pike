@@ -58,7 +58,8 @@ fetch_pack() {
         return
     fi
     echo "==> Downloading data pack $PACK_TAG..."
-    gh release download "$PACK_TAG" --repo tldev/pike --pattern pike.sqlite --output "$PACK_PATH" --clobber
+    mkdir -p "$(dirname "$PACK_PATH")"
+    curl -fL --progress-bar -o "$PACK_PATH" "https://github.com/tldev/pike/releases/download/$PACK_TAG/pike.sqlite"
     if ! pack_is_current; then
         echo "ERROR: $PACK_PATH does not match PACK_SHA256"
         rm -f "$PACK_PATH"

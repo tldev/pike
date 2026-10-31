@@ -32,7 +32,7 @@ Pike covers interstate highways across the continental US.
 
 ## Build
 
-Requires Xcode and the [GitHub CLI](https://cli.github.com/), signed in with `gh auth login`.
+Requires Xcode.
 
 ```bash
 ./build.sh --fetch-pack   # download the data pack pinned in build.sh
