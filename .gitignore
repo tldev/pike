@@ -1,0 +1,21 @@
+# Xcode
+build/
+DerivedData/
+xcuserdata/
+
+# macOS
+.DS_Store
+
+# Rust
+server/target/
+
+# Data pack, downloaded by build.sh
+Pike/Resources/pike.sqlite
+
+# Local environment
+.env
+
+# Build outputs
+*.ipa
+*.dSYM
+*.dSYM.zip

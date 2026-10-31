@@ -1,0 +1,134 @@
+name: Build Pack
+
+on:
+  workflow_dispatch:
+    inputs:
+      oi_release_tag:
+        description: "OpenInterstate release tag (leave empty for latest)"
+        required: false
+        type: string
+        default: ""
+      reachability_release_tag:
+        description: "openinterstate-reachability release tag (leave empty for latest)"
+        required: false
+        type: string
+        default: ""
+  repository_dispatch:
+    types: [reachability-release]
+
+jobs:
+  build-pack:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: dtolnay/rust-toolchain@master
+        with:
+          toolchain: "1.88"
+
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            server/target
+          key: ${{ runner.os }}-cargo-pike-export-${{ hashFiles('server/Cargo.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-cargo-pike-export-
+
+      - name: Build pike-export
+        working-directory: server
+        run: cargo build --release -p pike-export
+
+      - name: Fetch OpenInterstate release
+        id: oi
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          TAG: ${{ inputs.oi_release_tag }}
+        run: |
+          CACHE_DIR="$(mktemp -d)"
+          FETCH_CMD=(
+            python3 server/pipeline/bin/fetch_openinterstate_release.py
+            --cache-dir "$CACHE_DIR"
+          )
+          if [[ -n "$TAG" ]]; then
+            FETCH_CMD+=(--release-tag "$TAG")
+          fi
+
+          OI_JSON="$("${FETCH_CMD[@]}")"
+
+          RELEASE_DIR="$(echo "$OI_JSON" | jq -r .OPENINTERSTATE_RELEASE_DIR)"
+          RELEASE_ID="$(echo "$OI_JSON" | jq -r .OPENINTERSTATE_RELEASE_ID)"
+
+          echo "release_dir=$RELEASE_DIR" >> "$GITHUB_OUTPUT"
+          echo "release_id=$RELEASE_ID" >> "$GITHUB_OUTPUT"
+
+      - name: Fetch reachability CSV
+        id: reachability
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ inputs.reachability_release_tag || github.event.client_payload.release_tag }}
+        run: |
+          WORK_DIR="$(mktemp -d)"
+
+          DOWNLOAD_ARGS=(release download --repo tldev/openinterstate-reachability --pattern reachability.csv --dir "$WORK_DIR")
+          if [[ -n "$TAG" ]]; then
+            DOWNLOAD_ARGS+=("$TAG")
+          fi
+          gh "${DOWNLOAD_ARGS[@]}"
+
+          if [[ -n "$TAG" ]]; then
+            RESOLVED_TAG="$TAG"
+          else
+            RESOLVED_TAG="$(gh release view --repo tldev/openinterstate-reachability --json tagName --jq .tagName)"
+          fi
+          echo "csv=$WORK_DIR/reachability.csv" >> "$GITHUB_OUTPUT"
+          echo "tag=$RESOLVED_TAG" >> "$GITHUB_OUTPUT"
+
+      - name: Build SQLite pack
+        id: build
+        env:
+          RELEASE_DIR: ${{ steps.oi.outputs.release_dir }}
+          REACHABILITY_CSV: ${{ steps.reachability.outputs.csv }}
+        run: |
+          OUTPUT_DIR="$(mktemp -d)"
+          server/target/release/pike-export \
+            --release-dir "$RELEASE_DIR" \
+            --output "$OUTPUT_DIR/pike.sqlite" \
+            --reachability-snapshot-csv "$REACHABILITY_CSV"
+          echo "sqlite=$OUTPUT_DIR/pike.sqlite" >> "$GITHUB_OUTPUT"
+
+      - name: Generate checksums
+        env:
+          SQLITE: ${{ steps.build.outputs.sqlite }}
+        run: sha256sum "$SQLITE" > "$(dirname "$SQLITE")/checksums.txt"
+
+      - name: Create release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SQLITE: ${{ steps.build.outputs.sqlite }}
+          OI_RELEASE: ${{ steps.oi.outputs.release_id }}
+          REACHABILITY_RELEASE: ${{ steps.reachability.outputs.tag }}
+        run: |
+          SHORT_SHA="${GITHUB_SHA::7}"
+          TAG="pack-$(date -u +%Y%m%d)-${SHORT_SHA}"
+          CHECKSUMS="$(dirname "$SQLITE")/checksums.txt"
+
+          NOTES=$(cat <<EOF
+          ## Pack Build
+
+          - **OpenInterstate release:** ${OI_RELEASE}
+          - **Reachability release:** ${REACHABILITY_RELEASE}
+          - **Built from:** [\`${SHORT_SHA}\`](https://github.com/${GITHUB_REPOSITORY}/commit/${GITHUB_SHA})
+          EOF
+          )
+          NOTES="$(echo "$NOTES" | sed 's/^          //')"
+
+          gh release create "$TAG" \
+            "$SQLITE" \
+            "$CHECKSUMS" \
+            --title "Pack $TAG" \
+            --notes "$NOTES"

@@ -1,0 +1,664 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10000001 /* PikeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000001 /* PikeApp.swift */; };
+		A10000002 /* MainMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000002 /* MainMapView.swift */; };
+		A10000087 /* pike.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = A20000087 /* pike.sqlite */; };
+		A10000089 /* ExitServicePaginationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000089 /* ExitServicePaginationTests.swift */; };
+		A10000088 /* BundledPackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000088 /* BundledPackTests.swift */; };
+		A10000003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A20000003 /* Assets.xcassets */; };
+		A10000004 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000004 /* LocationManager.swift */; };
+		A10000005 /* GeoMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000005 /* GeoMath.swift */; };
+		A10000009 /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000009 /* POI.swift */; };
+		A10000010 /* POICategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000010 /* POICategory.swift */; };
+		A10000015 /* POIDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000015 /* POIDetailView.swift */; };
+		A10000019 /* KalmanFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000019 /* KalmanFilter.swift */; };
+		A10000023 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000023 /* SettingsView.swift */; };
+		A10000025 /* GeoMathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000025 /* GeoMathTests.swift */; };
+		A10000033 /* Exit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000033 /* Exit.swift */; };
+		A10000034 /* ExitCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000034 /* ExitCard.swift */; };
+		A10000035 /* ExitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000035 /* ExitService.swift */; };
+		A10000036 /* ExitCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000036 /* ExitCardView.swift */; };
+		A10000037 /* ExitBrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000037 /* ExitBrowserView.swift */; };
+		A10000038 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A20000038 /* libsqlite3.tbd */; };
+		A10000039 /* ExitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000039 /* ExitDetailView.swift */; };
+		A10000045 /* BrandHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000044 /* BrandHelpers.swift */; };
+		A10000047 /* CorridorLock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000047 /* CorridorLock.swift */; };
+		A10000050 /* BoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000050 /* BoundingBox.swift */; };
+		A10000052 /* ExitDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000052 /* ExitDatabase.swift */; };
+		A10000053 /* SQLiteExitDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000053 /* SQLiteExitDatabase.swift */; };
+		A10000054 /* ExitStabilizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000054 /* ExitStabilizer.swift */; };
+		A10000055 /* GraphStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000055 /* GraphStrategy.swift */; };
+		A10000057 /* POIPopulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000057 /* POIPopulator.swift */; };
+		A10000058 /* BundledPack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000058 /* BundledPack.swift */; };
+		A10000060 /* MockExitDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000060 /* MockExitDatabase.swift */; };
+		A10000061 /* ExitStabilizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000061 /* ExitStabilizerTests.swift */; };
+		A10000063 /* GraphStrategyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000063 /* GraphStrategyTests.swift */; };
+		A10000065 /* CorridorLockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000065 /* CorridorLockTests.swift */; };
+		A10000066 /* KalmanFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000066 /* KalmanFilterTests.swift */; };
+		A10000067 /* POIPopulatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000067 /* POIPopulatorTests.swift */; };
+		A10000073 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000073 /* AppConfig.swift */; };
+		A10000074 /* POIListFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000074 /* POIListFilter.swift */; };
+		A10000075 /* POIRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000075 /* POIRowView.swift */; };
+		A10000076 /* POIFilterBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000076 /* POIFilterBar.swift */; };
+		A10000077 /* POIListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000077 /* POIListView.swift */; };
+		A10000079 /* TestDrivePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000079 /* TestDrivePlayer.swift */; };
+		A10000080 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000080 /* OnboardingView.swift */; };
+		CBE954CE2F3E9576005575DA /* Sentry in Frameworks */ = {isa = PBXBuildFile; productRef = CBE954CD2F3E9576005575DA /* Sentry */; };
+		A10000081 /* MapPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000081 /* MapPlaceholder.swift */; };
+		A10000082 /* AppLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000082 /* AppLoadingView.swift */; };
+		A10000083 /* MainMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000083 /* MainMapViewModel.swift */; };
+		A10000084 /* MainMapCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000084 /* MainMapCoordinator.swift */; };
+		A10000085 /* MainMapViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000085 /* MainMapViewModelTests.swift */; };
+		A10000086 /* ExitCardCategoryVisibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000086 /* ExitCardCategoryVisibility.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A30000001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A40000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A50000001;
+			remoteInfo = Pike;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A20000001 /* PikeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PikeApp.swift; sourceTree = "<group>"; };
+		A20000002 /* MainMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMapView.swift; sourceTree = "<group>"; };
+		A20000003 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A20000004 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		A20000005 /* GeoMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoMath.swift; sourceTree = "<group>"; };
+		A20000009 /* POI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POI.swift; sourceTree = "<group>"; };
+		A20000010 /* POICategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POICategory.swift; sourceTree = "<group>"; };
+		A20000015 /* POIDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIDetailView.swift; sourceTree = "<group>"; };
+		A20000019 /* KalmanFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KalmanFilter.swift; sourceTree = "<group>"; };
+		A20000023 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A20000025 /* GeoMathTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoMathTests.swift; sourceTree = "<group>"; };
+		A20000027 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A20000033 /* Exit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exit.swift; sourceTree = "<group>"; };
+		A20000034 /* ExitCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExitCard.swift; sourceTree = "<group>"; };
+		A20000035 /* ExitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExitService.swift; sourceTree = "<group>"; };
+		A20000036 /* ExitCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExitCardView.swift; sourceTree = "<group>"; };
+		A20000037 /* ExitBrowserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExitBrowserView.swift; sourceTree = "<group>"; };
+		A20000038 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		A20000039 /* ExitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExitDetailView.swift; sourceTree = "<group>"; };
+		A20000044 /* BrandHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandHelpers.swift; sourceTree = "<group>"; };
+		A20000047 /* CorridorLock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorridorLock.swift; sourceTree = "<group>"; };
+		A20000050 /* BoundingBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoundingBox.swift; sourceTree = "<group>"; };
+		A20000052 /* ExitDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExitDatabase.swift; sourceTree = "<group>"; };
+		A20000053 /* SQLiteExitDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteExitDatabase.swift; sourceTree = "<group>"; };
+		A20000054 /* ExitStabilizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExitStabilizer.swift; sourceTree = "<group>"; };
+		A20000055 /* GraphStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphStrategy.swift; sourceTree = "<group>"; };
+		A20000057 /* POIPopulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIPopulator.swift; sourceTree = "<group>"; };
+		A20000058 /* BundledPack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundledPack.swift; sourceTree = "<group>"; };
+		A20000060 /* MockExitDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockExitDatabase.swift; sourceTree = "<group>"; };
+		A20000061 /* ExitStabilizerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExitStabilizerTests.swift; sourceTree = "<group>"; };
+		A20000063 /* GraphStrategyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphStrategyTests.swift; sourceTree = "<group>"; };
+		A20000065 /* CorridorLockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorridorLockTests.swift; sourceTree = "<group>"; };
+		A20000066 /* KalmanFilterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KalmanFilterTests.swift; sourceTree = "<group>"; };
+		A20000067 /* POIPopulatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIPopulatorTests.swift; sourceTree = "<group>"; };
+		A20000073 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		A20000074 /* POIListFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIListFilter.swift; sourceTree = "<group>"; };
+		A20000075 /* POIRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIRowView.swift; sourceTree = "<group>"; };
+		A20000076 /* POIFilterBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIFilterBar.swift; sourceTree = "<group>"; };
+		A20000077 /* POIListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIListView.swift; sourceTree = "<group>"; };
+		A20000087 /* pike.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = pike.sqlite; sourceTree = "<group>"; };
+		A20000089 /* ExitServicePaginationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExitServicePaginationTests.swift; sourceTree = "<group>"; };
+		A20000088 /* BundledPackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundledPackTests.swift; sourceTree = "<group>"; };
+		A20000079 /* TestDrivePlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDrivePlayer.swift; sourceTree = "<group>"; };
+		A20000080 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		A20000081 /* MapPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPlaceholder.swift; sourceTree = "<group>"; };
+		A20000082 /* AppLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLoadingView.swift; sourceTree = "<group>"; };
+		A20000083 /* MainMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMapViewModel.swift; sourceTree = "<group>"; };
+		A20000084 /* MainMapCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMapCoordinator.swift; sourceTree = "<group>"; };
+		A20000085 /* MainMapViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMapViewModelTests.swift; sourceTree = "<group>"; };
+		A20000086 /* ExitCardCategoryVisibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExitCardCategoryVisibility.swift; sourceTree = "<group>"; };
+		A60000001 /* Pike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pike.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A60000002 /* PikeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PikeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A70000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000038 /* libsqlite3.tbd in Frameworks */,
+				CBE954CE2F3E9576005575DA /* Sentry in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A70000002 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A80000001 = {
+			isa = PBXGroup;
+			children = (
+				A80000002 /* Pike */,
+				A80000009 /* PikeTests */,
+				A80000010 /* Products */,
+				CBE954CB2F3E8F1E005575DA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A80000002 /* Pike */ = {
+			isa = PBXGroup;
+			children = (
+				A20000027 /* Info.plist */,
+				A80000003 /* App */,
+				A80000004 /* Models */,
+				A80000005 /* Views */,
+				A80000006 /* Services */,
+				A80000007 /* Utilities */,
+				A80000011 /* Resources */,
+				A20000003 /* Assets.xcassets */,
+			);
+			path = Pike;
+			sourceTree = "<group>";
+		};
+		A80000003 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A20000001 /* PikeApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A80000004 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A20000009 /* POI.swift */,
+				A20000010 /* POICategory.swift */,
+				A20000033 /* Exit.swift */,
+				A20000034 /* ExitCard.swift */,
+				A20000086 /* ExitCardCategoryVisibility.swift */,
+				A20000074 /* POIListFilter.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A80000005 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A20000002 /* MainMapView.swift */,
+				A20000083 /* MainMapViewModel.swift */,
+				A20000084 /* MainMapCoordinator.swift */,
+				A20000015 /* POIDetailView.swift */,
+				A20000023 /* SettingsView.swift */,
+				A20000037 /* ExitBrowserView.swift */,
+				A20000039 /* ExitDetailView.swift */,
+				A20000077 /* POIListView.swift */,
+				A20000080 /* OnboardingView.swift */,
+				A80000012 /* Components */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A80000006 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A20000004 /* LocationManager.swift */,
+				A20000035 /* ExitService.swift */,
+				A20000052 /* ExitDatabase.swift */,
+				A20000053 /* SQLiteExitDatabase.swift */,
+				A20000054 /* ExitStabilizer.swift */,
+				A20000055 /* GraphStrategy.swift */,
+				A20000057 /* POIPopulator.swift */,
+				A20000058 /* BundledPack.swift */,
+				A20000079 /* TestDrivePlayer.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A80000007 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A20000005 /* GeoMath.swift */,
+				A20000073 /* AppConfig.swift */,
+				A20000019 /* KalmanFilter.swift */,
+				A20000047 /* CorridorLock.swift */,
+				A20000044 /* BrandHelpers.swift */,
+				A20000050 /* BoundingBox.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A80000009 /* PikeTests */ = {
+			isa = PBXGroup;
+			children = (
+				A20000025 /* GeoMathTests.swift */,
+				A20000060 /* MockExitDatabase.swift */,
+				A20000061 /* ExitStabilizerTests.swift */,
+				A20000063 /* GraphStrategyTests.swift */,
+				A20000065 /* CorridorLockTests.swift */,
+				A20000066 /* KalmanFilterTests.swift */,
+				A20000067 /* POIPopulatorTests.swift */,
+				A20000088 /* BundledPackTests.swift */,
+				A20000089 /* ExitServicePaginationTests.swift */,
+				A20000085 /* MainMapViewModelTests.swift */,
+			);
+			path = PikeTests;
+			sourceTree = "<group>";
+		};
+		A80000010 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A60000001 /* Pike.app */,
+				A60000002 /* PikeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A80000011 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A20000087 /* pike.sqlite */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A80000012 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A20000036 /* ExitCardView.swift */,
+				A20000075 /* POIRowView.swift */,
+				A20000076 /* POIFilterBar.swift */,
+				A20000081 /* MapPlaceholder.swift */,
+				A20000082 /* AppLoadingView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		CBE954CB2F3E8F1E005575DA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A20000038 /* libsqlite3.tbd */,
+			);
+			name = "Frameworks";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A50000001 /* Pike */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A90000001 /* Build configuration list for PBXNativeTarget "Pike" */;
+			buildPhases = (
+				AA0000001 /* Sources */,
+				A70000001 /* Frameworks */,
+				AB0000001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Pike;
+			productName = Pike;
+			productReference = A60000001 /* Pike.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A50000002 /* PikeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A90000004 /* Build configuration list for PBXNativeTarget "PikeTests" */;
+			buildPhases = (
+				AA0000002 /* Sources */,
+				A70000002 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC0000001 /* PBXTargetDependency */,
+			);
+			name = PikeTests;
+			productName = PikeTests;
+			productReference = A60000002 /* PikeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A40000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					A50000001 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					A50000002 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = A50000001;
+					};
+				};
+			};
+			buildConfigurationList = A90000007 /* Build configuration list for PBXProject "Pike" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A80000001;
+			packageReferences = (
+				CBE954CC2F3E9576005575DA /* XCRemoteSwiftPackageReference "sentry-cocoa" */,
+			);
+			productRefGroup = A80000010 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A50000001 /* Pike */,
+				A50000002 /* PikeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AB0000001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000003 /* Assets.xcassets in Resources */,
+				A10000087 /* pike.sqlite in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AA0000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000001 /* PikeApp.swift in Sources */,
+				A10000002 /* MainMapView.swift in Sources */,
+				A10000083 /* MainMapViewModel.swift in Sources */,
+				A10000084 /* MainMapCoordinator.swift in Sources */,
+				A10000004 /* LocationManager.swift in Sources */,
+				A10000005 /* GeoMath.swift in Sources */,
+				A10000073 /* AppConfig.swift in Sources */,
+				A10000009 /* POI.swift in Sources */,
+				A10000010 /* POICategory.swift in Sources */,
+				A10000015 /* POIDetailView.swift in Sources */,
+				A10000019 /* KalmanFilter.swift in Sources */,
+				A10000047 /* CorridorLock.swift in Sources */,
+				A10000023 /* SettingsView.swift in Sources */,
+				A10000033 /* Exit.swift in Sources */,
+				A10000034 /* ExitCard.swift in Sources */,
+				A10000086 /* ExitCardCategoryVisibility.swift in Sources */,
+				A10000035 /* ExitService.swift in Sources */,
+				A10000036 /* ExitCardView.swift in Sources */,
+				A10000037 /* ExitBrowserView.swift in Sources */,
+				A10000039 /* ExitDetailView.swift in Sources */,
+				A10000045 /* BrandHelpers.swift in Sources */,
+				A10000050 /* BoundingBox.swift in Sources */,
+				A10000052 /* ExitDatabase.swift in Sources */,
+				A10000053 /* SQLiteExitDatabase.swift in Sources */,
+				A10000054 /* ExitStabilizer.swift in Sources */,
+				A10000055 /* GraphStrategy.swift in Sources */,
+				A10000057 /* POIPopulator.swift in Sources */,
+				A10000058 /* BundledPack.swift in Sources */,
+				A10000074 /* POIListFilter.swift in Sources */,
+				A10000075 /* POIRowView.swift in Sources */,
+				A10000076 /* POIFilterBar.swift in Sources */,
+				A10000077 /* POIListView.swift in Sources */,
+				A10000079 /* TestDrivePlayer.swift in Sources */,
+				A10000080 /* OnboardingView.swift in Sources */,
+				A10000081 /* MapPlaceholder.swift in Sources */,
+				A10000082 /* AppLoadingView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA0000002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000025 /* GeoMathTests.swift in Sources */,
+				A10000060 /* MockExitDatabase.swift in Sources */,
+				A10000061 /* ExitStabilizerTests.swift in Sources */,
+				A10000063 /* GraphStrategyTests.swift in Sources */,
+				A10000065 /* CorridorLockTests.swift in Sources */,
+				A10000066 /* KalmanFilterTests.swift in Sources */,
+				A10000067 /* POIPopulatorTests.swift in Sources */,
+				A10000088 /* BundledPackTests.swift in Sources */,
+				A10000089 /* ExitServicePaginationTests.swift in Sources */,
+				A10000085 /* MainMapViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AC0000001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A50000001 /* Pike */;
+			targetProxy = A30000001 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		AD0000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AD0000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AD0000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 11;
+				DEVELOPMENT_TEAM = KBF2YGT2KP;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Pike/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Pike;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = NO;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = NO;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.3.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thelazydeveloper.pike;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		AD0000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 11;
+				DEVELOPMENT_TEAM = KBF2YGT2KP;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Pike/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Pike;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = NO;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = NO;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.3.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thelazydeveloper.pike;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		AD0000005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thelazydeveloper.pike.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pike.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Pike";
+			};
+			name = Debug;
+		};
+		AD0000006 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thelazydeveloper.pike.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pike.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Pike";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A90000001 /* Build configuration list for PBXNativeTarget "Pike" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD0000003 /* Debug */,
+				AD0000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A90000004 /* Build configuration list for PBXNativeTarget "PikeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD0000005 /* Debug */,
+				AD0000006 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A90000007 /* Build configuration list for PBXProject "Pike" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD0000001 /* Debug */,
+				AD0000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CBE954CC2F3E9576005575DA /* XCRemoteSwiftPackageReference "sentry-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/getsentry/sentry-cocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.4.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CBE954CD2F3E9576005575DA /* Sentry */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CBE954CC2F3E9576005575DA /* XCRemoteSwiftPackageReference "sentry-cocoa" */;
+			productName = Sentry;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = A40000001 /* Project object */;
+}
